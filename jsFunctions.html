@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Functions</h1>
+        <p>call a functioon which performs a calculation and returns the result: </p>
+
+
+        <p id="demo"></p>
+        <P id="deno"></P>
+        <p id="name"></p>
+        <P id="person"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+
+        <script>
+            //functions
+            function myFunction(p1,p2){
+                return p1*p2;
+            }
+            let result = myFunction(4,3);
+            document.getElementById("demo").innerHTML = result;
+
+            //function to convert fahrenheit ot celcius
+            function toCelcius(fahrenheit){
+                return (5/9) * (fahrenheit-32);
+            }
+            let value = toCelcius(77);
+            document.getElementById("deno").innerHTML = value;
+
+            //function use variable values
+            let text = "The temperature is "+ toCelcius(75)+"Celcius";
+            document.getElementById("name").innerHTML = text;
+
+            let dext="This variable which is Outside is: " + typeof carName; 
+            document.getElementById("demo1").innerHTML=dext;
+
+            function myFunction() {
+                let carName = "Volvos";
+                let text = "Inside: " + typeof carName + " " + carName; 
+                document.getElementById("demo2").innerHTML = text;
+            }
+            myFunction();
+
+            
+            function myName(){
+                let first = "Clinton";
+                let last="Juma";
+                let name = "My full names are "+ first +" "+  last +" Nyamora";
+                document.getElementById("demo3").innerHTML= name;
+            }
+            myName();
+            
+        </script>
+
+    </body>
+</html>

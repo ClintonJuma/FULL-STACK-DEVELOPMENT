@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Variables</h1>
+        <p>In this example, x, y, and z are undeclared.</p>
+        <p>They are automatically declared when first used.</p>
+
+        <p id="demo"></p>
+        <P id="deno"></P>
+        <p id="name"></p>
+        <P id="person"></p>
+
+        <script>
+            x = 5;
+            y = 6;
+            z = x+y;
+            document.getElementById("demo").innerHTML = "The value of z is:" + z;
+            let a = 3;
+            let b = 4;
+            let c = a+b;
+            document.getElementById("deno").innerHTML="The vakue of c is:" + c;
+            const price1=1000;
+            const price2=299;
+            let total = price1+price2;
+            document.getElementById("deno").innerHTML="The total price is :"+total;
+
+            let carName;
+            carName="clinton"; 
+            document.getElementById("name").innerHTML="My name is :"+carName;
+            // one statement many variables
+            let person="John Doe",age=23, carType="Sports Car", price=200;
+            document.getElementById("person").innerHTML ="The boys name is: "+person+" aged: "+age+" he drives a: "+carType+" priced at:"+price;
+
+            // js arithmetic
+            let e=2+3+"5";
+            document.getElementById("deno").innerHTML="The value is :" + e;
+            
+        </script>
+
+    </body>
+</html>

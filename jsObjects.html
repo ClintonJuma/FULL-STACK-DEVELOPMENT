@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <h1>Javascript</h1>
+        <h2>Creating an Object</h2>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+
+        <script>
+            //create an object
+            const car = {
+                type:"Toyota",
+                model:"Dmax",
+                color:"white",
+                horsepower:2000
+            };
+            //display data from the object
+            document.getElementById("demo").innerHTML="The typ of car is "+ car.type + " and it has a horsepower of "+ car.horsepower;
+
+            //creating an emoty object ND TYEN ADDING PROPORTIES on top
+            const person={};
+            person.firstName='Clinton';
+            person.lastName="Juma";
+            person.age=50;
+            document.getElementById("demo1").innerHTML = person.firstName + " is "+ person.age + " years old ";
+
+            const student = {
+                first: "John",
+                last: "Doe",
+                id: 5566,
+                //object method
+                fullName: function() {
+                    return this.first + " " + this.last;                }
+
+            };
+            //adding an object method   
+            student.fullNamess=function(){
+                return (this.first + this.last).toUpperCase();
+            }
+            document.getElementById("demo2").innerHTML = student.fullNamess();
+
+            //accessing properties with . 
+            const teacher = {
+                gender:"male",
+                subject :"Web development",
+                designation:"Classteacher",
+                age:34,
+                good:true,
+            }
+            //adding new property
+            teacher.nationality = "Kenyan";
+            teacher.award=true;
+            document.getElementById("demo3").innerHTML = "The teacher is a " + teacher.gender +" and is a " + teacher.nationality;
+
+            //nested objects
+            // Create nested Objects
+            const myObj = {
+                name: "John",
+                age: 30,
+                myCars: {
+                    car1: "Ford",
+                    car2: "BMW",
+                    car3: "Fiat"
+                }
+            }
+            document.getElementById("demo4").innerHTML = myObj.myCars.car2 + " " + myObj["myCars"]["car1"];
+            //displaying properties in a loop
+            const company = {
+                compName: "John",
+                valuation: 30,
+                city: "New York"
+            };
+            // Build a Text
+            let texty = "";
+            for (let x in personel) {
+                texty += person[x] + " ";
+            };
+
+            // Display the Text
+            document.getElementById("demo5").innerHTML = texty;
+  
+
+        </script>
+
+    </body>
+</html>

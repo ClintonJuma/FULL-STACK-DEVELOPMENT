@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOM example</title>
+        <style>
+            #alertBtn{
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS BOM example</h1>
+        <button id="alertBtn">show alert</button>
+        <button id="locationBtn">Show current location</button>
+        <button id="windowSizeBtn">Show windo size</button>
+        <p id="output"></p>
+        <script>
+            const output = document.getElementById("output");
+            document.getElementById("alertBtn").addEventListener("click", function(){
+                alert("Hello welcme to this BOM tab");
+            });
+            document.getElementById("locationBtn").addEventListener("click", function(){
+                output.textContent = "Current URL:" + window.location.href;
+            });
+
+            document.getElementById("windowSizeBtn").addEventListener("click", function(){
+                const width=window.innerWidth;
+                const height=window.innerHeight;
+                output.textContent = `Window Size: ${width}px x ${height}px`
+            });
+        </script>
+    </body>
+</html>

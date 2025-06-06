@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+        <style>
+            #myDiv{
+                padding:10px;
+                background-color:green;
+                margin-top:10px;
+                text-align:center;
+                color:white;
+                
+            }
+            button{
+                margin-top:10px;
+                padding:5px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="h1">JS BOM example</p>
+        <div id="myDiv">This is  the original text</div>
+        <button id="changeBtn">change text</button>
+        <button id="changeClr">Change color</button>
+        <script>
+            //accessing the division elements
+            const myDiv = document.getElementById("myDiv");
+            //acccesing button
+            const changeBtn = document.getElementById("changeBtn");
+            const ChangeClr = document.getElementById("changeClr");
+            //change text
+
+            changeBtn.addEventListener("click", function(){
+                myDiv.textContent = "This text has been changed using a javacripst code"
+            });
+
+            //changing background color
+            changeClrBtn.addEventListener("click", function(){
+                myDiv.style.backgroundColor = "blue";
+            });
+        </script>
+    </body>
+</html>
