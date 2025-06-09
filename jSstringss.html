@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Strings</h1>
+        <p id="demo"></p>
+        <p id="dem"></p>
+        <p id="demos"></p>
+        <p id="demoss"></p>
+        <p id="den"></p>
+        <p id="deno"></p>
+        <p id="id"></p>
+        <p id="idd"></p>
+        <p id="ids"></p>
+        <p id="idds"></p>
+        <p id="un"></p>
+        <p id="unn"></p>
+        <p id="unne"></p>
+        <p id="unos"></p>
+        <p id="uno"></p>
+        <p id="uni"></p>
+        <script>
+            let text = "John Doe";  // String written inside quotes
+            document.getElementById("demo").innerHTML = text;
+            document.getElementById("dem").innerHTML = text.length;
+
+            let text1 = "We are the so-called \"Vikings\" from the north.";
+            document.getElementById("demos").innerHTML = text1.length;
+
+            //breadking long lines
+            document.getElementById("demoss").innerHTML =
+            "Hello Dolly!";
+
+            //strings as objects
+            let x="John";
+            let y= new String("John");
+            document.getElementById("den").innerHTML =
+            typeof x + "<br>" + typeof y;
+
+            //STRING METHODS
+            //charAt - returns character in specified index
+            let word="Hello world";
+            document.getElementById("deno").innerHTML =  word.charAt(0);
+
+            //charCodeAt();retunrs code of the character ata specified index
+            let name="Hawayu Boy";
+            document.getElementById("id").innerHTML = name.charCodeAt(0);
+
+            //at
+            const text2 = "W3SCHOOLS";
+            let letter = text2.at(2);
+            let letters = text2.charAt(2)
+            document.getElementById("idd").innerHTML = letter;
+            document.getElementById("ids").innerHTML = letters;
+            document.getElementById("idds").innerHTML = text2[2]
+
+            //extracting string parts
+            //string(), extracts aprt of a tsinr gand returns part of new string
+            let text3 = "Apple, Banana, Kiwi";
+            let part = text3.slice(7,13);
+            document.getElementById("un").innerHTML = text3.slice(-12);
+            //upper case
+            document.getElementById("unn").innerHTML = text3.toUpperCase();
+
+            //concat
+            let firstName = "Clinton";
+            let lastName = "Juma";
+            let fullName = firstName.concat(" "+ lastName);
+            document.getElementById("unne").innerHTML = fullName;
+
+            //string to array us9ng split()
+            let vowels = "a, b, c, d, e";
+            const myArray = vowels.split("");
+            document.getElementById("unos").innerHTML = myArray[0];
+
+            //indexof()-string search
+            let sentence = "Please locate where 'locate' occurs!";
+            document.getElementById("uno").innerHTML = sentence.lastIndexOf("locate");
+
+            //search()
+            let words = "Please locate where 'locate' occurs!";
+            document.getElementById("uni").innerHTML = words.search("locate");
+        </script>
+    </body>
+</html>

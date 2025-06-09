@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="title" title="JavaScript">
+    </head>
+    <body>
+
+    <h1>Object Display</h1>
+
+    <P ID="dem"></P>
+    <p id="demo"></p>
+    <p id = "multi"></p>
+    <p id="arith"></p>
+    <p id="de"></p>
+
+    <script>
+        const person = {
+            name:"John",
+            age:30,
+            city:"New york"
+        };
+        document.getElementById("dem").innerHTML = person;
+        document.getElementById("demo").innerHTML = person.name + " , " + person.age + " , " + person.city;
+
+        //display properties on a loop
+        let text = " ";
+        for (let x in person){
+            text +=person[x]+ " ";
+        };
+        document.getElementById("multi").innerHTML = text;
+
+        //Object.values()
+        const student= {
+            firstName : "Clinton",
+            admission:4400,
+            class:"Form Four"
+        };
+        const myArray = Object.values(person)
+        document.getElementById("arith").innerHTML = myArray;
+    </script>
+
+    </body>
+</html>

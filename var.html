@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="title" title="JavaScript">
+    </head>
+    <body>
+
+    <h1>JavaScript Variables</h1>
+
+    <p>Strings are written with quotes.</p>
+    <p>Numbers are written without quotes.</p>
+
+    <p id="demo"></p>
+    <P ID="dem"></P>
+    <p id = "multi"></p>
+    <p id="arith"></p>
+
+    <script>
+    const pi = 3.14;
+    let person = "John Doe";
+    let answer = 'Yes I am!';
+
+    document.getElementById("demo").innerHTML =
+    pi + "<br>" + person + "<br>" + answer;
+
+    let x=5;
+    let y=6;
+    let z=x+y;
+    document.getElementById("dem").innerHTML=z;
+
+    let people = "clinton Juma", 
+    carName="Volvo", 
+    price = "2000000";
+    document.getElementById("multi").innerHTML = people + "<br>" + carName  + "<br>" + price;
+
+    let a = "John" + " "+"Doe";
+    document.getElementById("arith").innerHTML = a;
+
+   
+
+    </script>
+
+    </body>
+</html>

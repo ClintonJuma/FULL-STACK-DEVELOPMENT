@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="title" title="JavaScript">
+    </head>
+    <body>
+
+    <h1>JavaScript Const</h1>
+
+    <P ID="dem"></P>
+    <p id="demo"></p>
+    <p id = "multi"></p>
+    <p id="arith"></p>
+    <p id="de"></p>
+
+    <script>
+//CONST ARRAYS 
+        const cars = ["saab", "volvo", "benz"];
+        document.getElementById("dem").innerHTML=cars;
+
+        // you can chnage an elemenr using the index  
+        document.getElementById("dem").innerHTML=cars[0];
+        cars[0] = "Toyota";
+        document.getElementById("dem").innerHTML=cars;
+        //add an element using push
+        cars.push("Audi");
+        document.getElementById("dem").innerHTML=cars;
+
+ // CONST OBJECTS
+        const motor  = {
+            type:"Fiat", 
+            model :"500",
+            color:"white",
+        };
+        //accessing an element in a dictionary 
+        document.getElementById("demo").innerHTML=motor.color;
+        //chaning element 
+        motor.color = "red";
+        document.getElementById("demo").innerHTML=motor.color;
+    
+//Block scope
+        const x = 10; 
+        {
+            const x = 11;
+        }
+
+        document.getElementById("de").innerHTML=x;
+    </script>
+
+    </body>
+</html>

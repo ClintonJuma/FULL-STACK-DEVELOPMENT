@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript HTML Events</h1>
+        <h2>The onclick Attribute</h2>
+        <p id="demo"></p>
+        <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button><br>
+        <button onclick="this.innerHTML = Date()">The time is?</button><br>
+        <button onclick="displayDate()"> time is?</button><br>
+        <script>
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+        </script>
+    </body>
+</html>
