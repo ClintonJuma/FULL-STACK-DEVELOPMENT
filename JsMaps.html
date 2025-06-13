@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+        <body>
+        <h1>JavaScript Maps</h1>
+        <h2>The new Map Method()</h2>
+
+        <p>Creating a map from an array:</p>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+
+
+        <script>
+            // Create a Map
+            const fruits = new Map([
+                ["apples", 500],
+                ["bananas", 300],
+                ["oranges", 200],
+            ])
+            document.getElementById("demo").innerHTML = fruits.get("apples");
+            document.getElementById("demo1").innerHTML = fruits;
+            //changing using set
+            updated = fruits.set("apples", 10000);
+            document.getElementById("demo2").innerHTML = fruits.get("apples");
+
+        //Map Methods
+            //size()
+            document.getElementById("demo3").innerHTML = fruits.size;
+
+            //delete()
+            fruits.delete("apples")
+            document.getElementById("demo4").innerHTML = fruits.size;
+            //clear();removes all ements 
+            fruits.clear();
+            document.getElementById("demo5").innerHTML = fruits.size;
+            //has();returns true if a key exists
+            document.getElementById("demo6").innerHTML = fruits.has("apples");
+
+            //forEach()
+            const cars = new Map([
+                ["BMW", 20000],
+                ["Toyota", 50000],
+                ["Mazda", 30000],
+            ])
+            let text="";
+            cars.forEach(function(value, key){
+                text+=key+"="+value+"<br>";
+            })
+            document.getElementById("demo7").innerHTML=text;
+
+            let txt="";
+            for (const x of cars.entries()){
+                txt+=x;
+            }
+            document.getElementById("demo8").innerHTML = txt;
+
+            
+
+        </script>
+
+        </body>
+</html>

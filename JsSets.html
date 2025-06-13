@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Sets</h1>
+        <p>Create a set from an array:</p>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+
+        <script>
+        // Create a Set
+            const letters = new Set(["a","b","c"]);
+        // Display set.size
+            document.getElementById("demo").innerHTML = "The set has " + letters.size + " values.";
+
+            let text="";
+            for (const x of letters){
+                text+=x+"<br>";
+            }
+            document.getElementById("demo1").innerHTML = text;
+
+        //SET Methods
+            //has()method
+            answer = letters.has("d");
+            document.getElementById("demo2").innerHTML=answer;
+
+        //forEach()
+            let txt="";
+            letters.forEach(function(value){
+                txt+=value;
+
+            })
+            document.getElementById("demo3").innerHTML=txt;
+
+        //values()
+            const vowels = new Set(["a","e","i","o","u"]);
+            //gettig all values
+            const myIterator = vowels.values();
+            //list all values
+            let txts="";
+            for (const entry of myIterator){
+                text+=entry;
+            }
+            document.getElementById("demo4").innerHTML=txts;
+
+
+            
+
+        </script>
+
+    </body>
+</html>

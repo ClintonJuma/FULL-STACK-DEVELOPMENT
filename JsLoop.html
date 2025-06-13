@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>JavaScript For Loop</h2>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+
+        <script>
+            const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];//array
+
+            let text = "";
+            for (let i = 0; i < cars.length; i++) {
+                text += cars[i] + "<br>";
+            }
+
+            document.getElementById("demo").innerHTML = text;
+
+            for (let a = 0; a<5; a++){
+
+            }
+
+            let i = 2;
+            let len  = cars.length;
+            let texts = "";
+            for(;i<len;i++){
+                texts+=cars[i]+"<br>";
+            }
+            document.getElementById("demo1").innerHTML = texts;
+
+            const carss = ["BMW", "Volvo", "Saab", "Ford"];
+            let a, lens, textss;
+            for (a = 0, lens = cars.length, textss = ""; a < lens; a++) {
+                textss += carss[a] + "<br>";
+            }
+            document.getElementById("demo2").innerHTML = textss;
+                        
+        </script>
+
+    </body>
+</html>
