@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width:400px;
+                height:400px;
+                position:relative;
+                background:yellow;
+            }
+            #animate{
+                width:50px;
+                height:50px;
+                position:absolute;
+                background:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOM</h1>
+        <p></p>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <img id="myIMage" src="smiley.gif">
+        <p>Form validation</p>
+        <form name="myForm" action = "/action_page.php" onsubmit="return validateForm()" method="post">
+            Name:<input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form>
+
+    
+
+        <p>PLease input a number betwen 1 and 10: </p>
+        <input id="numb">
+        <button type="button" onclick="myFunction()">Submit</button><br>
+        <br>
+        <br>
+        <p>Automatic form validation</p>
+
+        <form action="/action_page.php" method="post">
+            <input type="text" name="fname" required>
+            <input type="submit" value="submit">
+        </form>
+
+        <p><b>changing css using js</b></p>
+
+        <p id="p1">Hello world</p>
+        <p id="p2">Hello world</p>
+        <br>
+        <br>
+        <p>DOM Animation</p>
+
+        
+        <p><button onclick="myMove()">Click Me</button></p> 
+
+        <div id="container">
+            <div id="animate">My animation will go here </div>
+        </div>
+
+        <H2>EVENTS</H2>
+        <h3 onclick="this.innerHTML = 'Oooops!'">Clicl on this text!</h3>
+        <h3 onlick="changeText()">Click on this text</h3>
+
+        <script>
+            //changing HTML content
+            document.getElementById("demo").innerHTML  ="New text";
+
+
+            //Form validation
+            function validateForm(){
+                let x=document.forms["myForm"]["fname"].value;
+                if (x==""){
+                    alert("Name must be filled out");
+                    return false;
+                }
+            }
+
+            function myFunction(){
+                let x=document.getElementById("numb").value;
+                let text;
+                if (isNaN(x) || x <1|| x>10){
+                    text="Input is not valid";
+                }else{
+                    text="Inout is okay";
+                }
+                document.getElementById("demo1").innerHTML = text;
+            }
+
+            //changing CSS 
+
+            document.getElementById("p1").style.color="blue";
+            document.getElementById("p2").style.fontFamily="Arial";
+            document.getElementById("p2").style.fontSize="larger";
+
+            //animation
+            function myMove(){
+                let id=null;
+                const elem=document.getElementById("animate");
+                let pos=0;
+                clearInterval(id);
+                id=setInterval(frame, 5);
+                function frame(){
+                    if (pos ==350){
+                        clearInterval(id);
+                    }else{
+                        pos++;
+                        elem.style.top=pos+"px";
+                        elem.style.left=pos+"px";
+                    }
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

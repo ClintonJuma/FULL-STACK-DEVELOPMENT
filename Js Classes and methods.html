@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Class Methods</h1>
+        <p>How to define and use a Class method.</p>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+
+        <script>
+            class Car{
+                constructor(name, year){
+                    this.name=name;
+                    this.year=year;
+                }
+                age(){
+                    const date= new Date();
+                    return date.getFullYear() - this.year;
+                }
+            }
+            //creating object
+            const myCar = new Car("Ford", 2014);
+            document.getElementById("demo").innerHTML = "My car is " + myCar.age() + "years old";
+
+            //class inheritance
+            class Vehicle{
+                constructor(brand){
+                    this.carname=brand;
+                }
+                //method
+                present(){
+                    return "I have a " +this.carname;
+                }
+            }
+            //class with inheritance
+            class Model extends Vehicle{
+                constructor(brand, mod){
+                    super(brand);
+                    this.model=mod;
+                }
+                show(){
+                    return this.present() + " it is a " + this.model;
+                }
+            }
+            let myVehicle = new Model("Ford", "Mustang");
+            document.getElementById("demo1").innerHTML = myVehicle.show();
+
+        </script>
+
+    </body>
+</html>
