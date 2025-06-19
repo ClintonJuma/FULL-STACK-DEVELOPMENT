@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+    <h2>JavaScript Window</h2>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <input type="button" value="Back" onclick="goBack()">
+
+    <script>
+        //window
+        document.getElementById("demo").innerHTML = "Browser inner window width is: "+ window.innerWidth + "px<br>" +
+        "Browser inner window height is: "+window.innerHeight + "px";
+        //screen
+
+        document.getElementById("demo1").innerHTML = "Screen width: "+screen.width;
+
+        //location
+        document.getElementById("demo2").innerHTML = "Page location is :" + location.href;
+
+        //History
+        function goBack(){
+            window.history.back()
+        }
+
+        //Navigator Object
+        document.getElementById("demo3").innerHTML = "cookiesEnabled is: "+navigator.cookieEnabled;
+
+    </script>
+
+</body>
+</html>
